@@ -1,26 +1,42 @@
 
 
-//find all prime number between 1 - 1000
-var count=0;
-for(var i=1;i<=1000;i++)
-{
-    for(var j=i;j>=1;j--)
+
+function findPrimeNumbers(){
+    console.log("++++++++++++++++++++++++");
+    console.log("printing the prime numbers between 1 to 1000");
+    var count=0;
+    for(var i=1;i<=1000;i++)
     {
-        if(i%j==0)
-            count++;
+        for(var j=i;j>=1;j--)
+        {
+            if(i%j==0)
+                count++;
+        }
+        if(count<=2)
+        {
+            console.log(i);
+        }
+        count=0;
     }
-    if(count<=2)
-    {
-       console.log(i);
-    }
-    count=0;
+    console.log("++++++++++++++++++++++++");
 }
 
-//Add number 5 for each array element
-var array=[1,2,3];
-for(var i=0;i<array.length;i++)
-{
-    var m=array[i]+5;
-   console.log(m);
+
+findPrimeNumbers();
+
+
+
+function printThreeNumbers() {
+    var numbers = [1, 2, 3];
+
+    console.log("========================");
+    console.log("Print 1,2,3 with adding five");
+    for (var i = 0; i < numbers.length; i++) {
+        var numberPlusFive = numbers[i] + 5;
+        console.log(numberPlusFive);
+    }
+    console.log("========================");
 }
+
+printThreeNumbers();
 
