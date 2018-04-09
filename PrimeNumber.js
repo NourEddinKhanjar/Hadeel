@@ -1,7 +1,6 @@
 
 
 //find all prime number between 1 - 1000
-var array=[];
 var count=0;
 for(var i=1;i<=1000;i++)
 {
@@ -12,26 +11,16 @@ for(var i=1;i<=1000;i++)
     }
     if(count<=2)
     {
-       array.push(i);
+       console.log(i);
     }
     count=0;
 }
-for(var i=0;i<=array.length;i++)
+
+//Add number 5 for each array element
+var array=[1,2,3];
+for(var i=0;i<array.length;i++)
 {
-    console.log(array[i]);
+    var m=array[i]+5;
+   console.log(m);
 }
 
-
-// //Add number 5 for each array element
-// var array=[1,2,3];
-// var n=array[0]+5;
-// var outarray=[n]
-// for(var i=1;i<=array.length;i++)
-// {
-//     var m=array[i]+5;
-//     outarray.push(m);
-// }
-// for(var j=0;j<=outarray.length;i++)
-// {
-//     console.log(outarray[i]);
-// }
