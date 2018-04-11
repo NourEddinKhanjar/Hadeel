@@ -1,28 +1,51 @@
 
-
-
 function findPrimeNumbers(){
     console.log("++++++++++++++++++++++++");
     console.log("printing the prime numbers between 1 to 1000");
-    var count=0;
-    for(var i=1;i<=1000;i++)
+    var Numberofdevidenumbers=0;
+    for(var number=1;number<=1000;number++)
     {
-        for(var j=i;j>=1;j--)
+        for(var NumberWillDevideOnIt=number;NumberWillDevideOnIt>=1;NumberWillDevideOnIt--)
         {
-            if(i%j==0)
-                count++;
+            if(number%NumberWillDevideOnIt==0)
+            {
+                Numberofdevidenumbers++;
+            }
         }
-        if(count<=2)
+        if(Numberofdevidenumbers<=2)
         {
-            console.log(i);
+            console.log(number);
         }
-        count=0;
+        Numberofdevidenumbers=0;
     }
     console.log("++++++++++++++++++++++++");
 }
+// findPrimeNumbers();
 
 
-findPrimeNumbers();
+function findPrimeNumberBetweenOneAndThousand() {
+    var isPrimeNumber = true;
+
+    for (var number = 1; number <= 1000; number++) {
+
+        for (var numberWillDavideOnIt = 1; numberWillDavideOnIt <= number; numberWillDavideOnIt++) {
+
+            var canDividedBy = number % numberWillDavideOnIt === 0;
+            var notMe = numberWillDavideOnIt !== number;
+            var notOne = numberWillDavideOnIt !== 1;
+
+            if (canDividedBy && notMe && notOne) {
+                isPrimeNumber = false;
+                break;
+            }
+            isPrimeNumber = true;
+        }
+        if (isPrimeNumber) {
+            console.log(number);
+        }
+    }
+}
+//findPrimeNumberBetweenOneAndThousand();
 
 
 
@@ -38,5 +61,5 @@ function printThreeNumbers() {
     console.log("========================");
 }
 
-printThreeNumbers();
+// printThreeNumbers();
 
